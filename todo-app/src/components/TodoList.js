@@ -37,12 +37,17 @@ const TodoList = () => {
             <div className="todo-container">
                 <ul className="todo-list">
                     {todos.map(todo =>  
-                        <Todo 
-                            id={todo.id} 
-                            todo={todo.todo}
-                            todos={todos}
-                            setTodos={setTodos}
-                        />
+                        <div key={todo.id}>
+
+                            <Todo 
+                                id={todo.id} 
+                                todo={todo.todo}
+                                todos={todos}
+                                setTodos={setTodos}
+                            
+
+                            />
+                        </div>
                         
                      )};
 
