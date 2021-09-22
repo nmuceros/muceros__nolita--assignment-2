@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import TodoList from "./TodoList";
 
-const Todo = ({todos, todo, setTodos }) => {
+const Todo = ({input, todos, setTodos, todo }) => {
 
     const [completed, setCompleted] = useState(false);
 
@@ -30,7 +30,7 @@ const Todo = ({todos, todo, setTodos }) => {
         <div>
             <li className="todo-item" onClick={completeTodoHandler}
                 style={{ color: completed === true ? "grey" : "" }}>
-                {todo}
+                {input}
             </li>
         </div>
 
