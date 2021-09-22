@@ -17,7 +17,7 @@ const TodoList = () => {
 
     const submitTodo_Handler = (e) => {
         e.preventDefault(); /* prevents state to return to its default state */
-        setTodos([...todos, {input: todo, completed: false, id: Math.random() * 1000}]);
+        setTodos([...todos, {entered_todo: todo, completed: false, id: Math.random() * 1000}]);
         setTodo(""); /* set the state to its default value */
     }
     
@@ -41,7 +41,7 @@ const TodoList = () => {
 
                             <Todo 
                                 id={todo.id} 
-                                input={todo.input}
+                                entered_todo={todo.entered_todo}
                                 todos={todos}
                                 setTodos={setTodos}
                                 todo={todo}
