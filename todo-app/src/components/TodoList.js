@@ -39,17 +39,17 @@ const TodoList = () => {
                     {todos.map(todo =>  
                         <div key={todo.id}>
 
-                            <Todo 
+                            <Todo todos={todos} todo={todo} setTodos={setTodos}
                                 id={todo.id} 
                                 todo={todo.todo}
-                                todos={todos}
-                                setTodos={setTodos}
+                                // todos={todos}
+                                // setTodos={setTodos}
                             
 
                             />
                         </div>
                         
-                     )};
+                     )}
 
                     
                 </ul>
