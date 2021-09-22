@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Todo from "./Todo";
+import "../../src/App.css"
 
 
 const TodoList = () => {
@@ -24,22 +25,26 @@ const TodoList = () => {
     
 
     return (
-        <div>
-            <form onSubmit={ submitTodo_Handler }>
-                 <input 
-                    className="form-control" 
-                    type="text" 
-                    placeholder="Add an item..." 
-                    onChange={ changeTodo_Handler} 
-                    value = { todo } />
-            </form>
-
-            {/* <div className="todo-container"> */}
+        <div className="todo-list-container">
+            <div className="form-container">
+                <form onSubmit={ submitTodo_Handler }>
+                    <input 
+                        className="form-control" 
+                        type="text" 
+                        placeholder="Input to do here..." 
+                        onChange={ changeTodo_Handler} 
+                        value = { todo } />
+                </form>
+            </div>
+            {/* <div className="sticky-here">Sticky Here</div> */}
+            <div className="todo-container">
                 <ul className="todo-list">
                     {todos.map((todo) => 
                         // <div key={todo.id}>
 
-                            <label class="container">
+                            // <label className="chekcbox-container">
+                            //      <span className="checkmark"></span>
+                            //      <input type="checkbox" />
                                 
                                 <Todo 
                                     id={todo.id} 
@@ -49,9 +54,9 @@ const TodoList = () => {
                                     todo={todo}
                                 />
                                 
-                                 <input type="checkbox" />
-                                 <span class="checkmark"></span>
-                            </label>
+                                
+                                
+                            // </label>
 
 
 
@@ -63,7 +68,7 @@ const TodoList = () => {
 
                     
                 </ul>
-             {/* </div> */}
+             </div>
 
 
 

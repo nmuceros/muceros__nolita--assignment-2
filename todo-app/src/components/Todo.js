@@ -27,10 +27,19 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
         
 
     return (
-        <div>
+        <div className="todo-item-container">
             <li className="todo-item" onClick={completeTodoHandler}
                 style={{ color: completed === true ? "grey" : "" }}>
-                {entered_todo}
+
+                <label className="checkbox-container">
+                  
+                    <input type="checkbox" />
+                    <span className="checkmark"></span>
+                    {entered_todo}
+                </label>
+
+             
+
             </li>
         </div>
 
