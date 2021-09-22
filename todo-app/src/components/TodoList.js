@@ -34,27 +34,42 @@ const TodoList = () => {
                     value = { todo } />
             </form>
 
-            <div className="todo-container">
+            {/* <div className="todo-container"> */}
                 <ul className="todo-list">
-                    {todos.map(todo =>  
+                    {todos.map((todo) => ( 
                         <div key={todo.id}>
 
-                            <Todo 
+                            {/* <label class="container">
+                                
+                                <Todo 
+                                    id={todo.id} 
+                                    entered_todo={todo.entered_todo}
+                                    todos={todos}
+                                    setTodos={setTodos}
+                                    todo={todo}
+                                />
+                                
+                                 <input type="checkbox" />
+                                 <span class="checkmark"></span>
+                            </label> */}
+
+
+
+                            <Todo      
                                 id={todo.id} 
                                 entered_todo={todo.entered_todo}
                                 todos={todos}
                                 setTodos={setTodos}
-                                todo={todo}
-                            
-
+                                todo={todo}                        
                             />
+                            
                         </div>
                         
-                     )}
+                    ))}
 
                     
                 </ul>
-             </div>
+             {/* </div> */}
 
 
 
