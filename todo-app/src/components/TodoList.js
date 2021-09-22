@@ -36,10 +36,10 @@ const TodoList = () => {
 
             {/* <div className="todo-container"> */}
                 <ul className="todo-list">
-                    {todos.map((todo) => ( 
-                        <div key={todo.id}>
+                    {todos.map((todo) => 
+                        // <div key={todo.id}>
 
-                            {/* <label class="container">
+                            <label class="container">
                                 
                                 <Todo 
                                     id={todo.id} 
@@ -51,21 +51,15 @@ const TodoList = () => {
                                 
                                  <input type="checkbox" />
                                  <span class="checkmark"></span>
-                            </label> */}
+                            </label>
 
 
 
-                            <Todo      
-                                id={todo.id} 
-                                entered_todo={todo.entered_todo}
-                                todos={todos}
-                                setTodos={setTodos}
-                                todo={todo}                        
-                            />
+                           
                             
-                        </div>
+                        // </div>
                         
-                    ))}
+                    )}
 
                     
                 </ul>
