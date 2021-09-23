@@ -40,12 +40,8 @@ const TodoList = () => {
             <div className="todo-container">
                 <ul className="todo-list">
                     {todos.map((todo) => 
-                        // <div key={todo.id}>
+                        <div key={todo.id}>
 
-                            // <label className="chekcbox-container">
-                            //      <span className="checkmark"></span>
-                            //      <input type="checkbox" />
-                                
                                 <Todo 
                                     id={todo.id} 
                                     entered_todo={todo.entered_todo}
@@ -54,15 +50,8 @@ const TodoList = () => {
                                     todo={todo}
                                 />
                                 
-                                
-                                
-                            // </label>
-
-
-
-                           
                             
-                        // </div>
+                        </div>
                         
                     )}
 

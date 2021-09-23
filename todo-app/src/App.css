@@ -6,21 +6,23 @@ body, html {
 }
 
 .main-container {
-  /* position: fixed; */
   position: absolute;
   width: 35%;
   /* height: auto; */
-  height: 100%;
+  height: 80%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-style: solid;
   border-width: 1px;
   /* text-align: center; */
+
+  border-color: red;
   
+
 }
 
-h1 {
+h2 {
   text-align: center;
 }
 
@@ -29,61 +31,39 @@ h1 {
   /* position: -webkit-sticky; */
   /* position: sticky; */
   margin-bottom: 1rem;
-  /* text-align: center; */
-
 }
 
-/* .sticky-here {
-  position: -webkit-sticky;
-  position: sticky;
-} */
-
-form {
-  /* margin-bottom: 1rem;
-  text-align: center; */
-
-}
 
 .todo-container {
   position: relative;
-  /* background-color: red; */
-  border-style: solid;
-  border-width: 3px;
-  border-color: green;
   max-height: 24rem;
   overflow: hidden;
-  overflow-y: auto;
+  overflow: scroll;
+  /* overflow-y: auto; */
+  /* border-style: solid; */
+  /* border-width: 3px; */
+  /* border-color: green; */
   
 }
 
-.todo-list {
-  /* background-color: red; */
-}
-
-.todo-list label {
-  /* color: green; */
-}
-
-.todo-item-container {
-  /* padding-left: 2rem; */
-  /* width: 30%; */
-  /* background-color: yellow; */
-}
 
 ul {
-  /* position: relative; */
   list-style-type: none;
-  /* overflow: hidden; */
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.5;
+
 }
 
 /* The container */
-/* .todo-list .checkbox-container { */
 .checkbox-container {
   display: block;
   position: relative;
   padding-left: 2rem;
   margin-right: 2rem;
-  /* margin-bottom: 12px; */
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -91,7 +71,6 @@ ul {
   -ms-user-select: none;
   user-select: none;
 
-  /* color: yellow; */
   border-style: solid;
   border-width: 5px;
   border-color: pink;
@@ -104,9 +83,6 @@ ul {
   cursor: pointer;
   height: 0;
   width: 0;
-
-  /* opacity: 1;
-  color: red; */
 }
 
 /* Create a custom checkbox */
@@ -117,8 +93,6 @@ ul {
   height: 25px;
   width: 25px;
   background-color: #eee;
-
-  /* background-color: red; */
 }
 
 /* On mouse-over, add a grey background color */
@@ -128,7 +102,8 @@ ul {
 
 /* When the checkbox is checked, add a blue background */
 .checkbox-container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  /* background-color: #2196F3; */
+  background-color: palevioletred;
 }
 
 
@@ -137,8 +112,6 @@ ul {
   content: "";
   position: absolute;
   display: none;
-
-  /* background-color: red; */
 }
 
 /* Show the checkmark when checked */

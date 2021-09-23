@@ -5,7 +5,7 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
 
     const [completed, setCompleted] = useState(false);
 
-    const completeTodoHandler = () => {
+    const completeTodo_Handler = () => {
         setCompleted(true);
 
         setTodos(todos.map( (item) => {
@@ -23,22 +23,22 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
 
     }
 
-
-        
-
     return (
         <div className="todo-item-container">
-            <li className="todo-item" onClick={completeTodoHandler}
-                style={{ color: completed === true ? "grey" : "" }}>
+            {/* style={{ color: completed === true ? "grey" : "" }} */}
+            <li className={`todo-item ${todo.completed ? "completed" : ''}`} 
+                onClick={completeTodo_Handler}
+                
+            >
 
-                <label className="checkbox-container">
+                {/* <label className="checkbox-container">
                   
                     <input type="checkbox" />
                     <span className="checkmark"></span>
                     {entered_todo}
-                </label>
+                </label> */}
 
-             
+                {entered_todo}
 
             </li>
         </div>
