@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 // import TodoList from "./TodoList";
+import deleteIcon from '../images/delete.svg';
 
 const Todo = ({entered_todo, todos, setTodos, todo }) => {
 
-    // const [completed, setCompleted] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
-
-    
 
     const completeTodo_Handler = e => {
         setIsChecked(!isChecked)
@@ -15,40 +13,48 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
             if(item.id === todo.id) {
                 return {
                     ...item, completed: !item.completed
-                }
+                };
             }
             return item;
-        }
+        }));
+    };
 
-        )
+    const deleteTodo_Handler = () => {
 
-        )
-    
-    }
+        setTodos(todos.filter( (item) => item.id !== todo.id ));
+    };
 
     return (
         <div className="todo-item-container">
-            {/* style={{ color: completed === true ? "grey" : "" }} */}
-            {/* onClick={completeWhenSelect_Handler} */}
-            <li className={`todo-item ${todo.completed ? "completed" : ''}`} 
-                
-                
-            >
+         
+                <div className="delete-container">
+                    <a onClick={deleteTodo_Handler} >
+                         <img className="delete-icon" alt="" src={deleteIcon} />
+                   </a>
+                 </div>
 
-                <label className="checkbox-container">
-                  
-                    <input type="checkbox" 
-                            checked={isChecked}
-                            onChange={completeTodo_Handler}
-                    />
+                <li className={`todo-item ${todo.completed ? "completed" : "todo-item"}`} 
+                >
+            
 
-                    <span className="checkmark"></span>
-                    {entered_todo}
-                </label>
+                    <label className="checkbox-container">
+                        {/* <span className="checkmark"></span> */}
+                        <input type="checkbox" 
+                                checked={isChecked}
+                                onChange={completeTodo_Handler}
+                        />
+                    
+                        {entered_todo}
 
-                {/* {entered_todo} */}
 
-            </li>
+
+                    </label>
+
+
+                </li>
+
+        
+
         </div>
 
     );

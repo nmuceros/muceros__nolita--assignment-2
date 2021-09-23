@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Todo from "./Todo";
 import "../../src/App.css"
-
+// import deleteIcon from '../images/delete.svg';
 
 const TodoList = () => {
     /* Hooks */
@@ -18,7 +18,12 @@ const TodoList = () => {
 
     const submitTodo_Handler = (e) => {
         e.preventDefault(); /* prevents state to return to its default state */
-        setTodos([...todos, {entered_todo: todo, completed: false, id: Math.random() * 1000}]);
+        setTodos([...todos, {
+                    entered_todo: todo, 
+                    completed: false, 
+                    id: Math.random() * 1000,
+                
+                }]);
         setTodo(""); /* set the state to its default value */
     }
     
@@ -48,6 +53,7 @@ const TodoList = () => {
                                     todos={todos}
                                     setTodos={setTodos}
                                     todo={todo}
+                                   
                                 />
                                 
                             
