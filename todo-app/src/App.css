@@ -2,121 +2,89 @@ body {
   padding: 0;
   margin: 0;
   font-family: Tahoma;
-  /* overflow: auto; */
-  /* background-color: linear-gradient(#87A7B3, #CDC7BE, #E1F1DD) no-repeat; */
-  /* background-image: linear-gradient(to right top, #587eb7, #00a3da, #00c5ca, #00de87, #a8eb12); */
-  /* background-color: linear-gradient(to right top, #587eb7, #00a3da, #00c5ca, #00de87, #a8eb12); */
-  /* background-color: linear-gradient(to right, red , yellow); */
-  /* background-color: red; */
   background-color: black;
-
   background-size: cover;
   height: 100%;
-  /* background-color: #d5d5d5;   */
 
-  
+  overflow: auto;
 }
 
 
 .main-container {
   position: absolute;
   width: 35%;
-  height: 80%;
+  /* The unit of heigh must be 34 rem to align with the .todo-container */
+  height: 34rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-style: solid;
   border-width: 2px;
-
   border-color: darkgray;
-  /* overflow: scroll; */
-
-  /* padding-right: 2rem; */
-  /* background: linear-gradient(#87A7B3, #CDC7BE, #E1F1DD) no-repeat; */
-
   background-image: linear-gradient(to right top, #587eb7, #00a3da, #00c5ca, #00de87, #a8eb12);
-
 }
 
 h2 {
   text-align: center;
-  /* background-color: lightgray; */
+  color: #587eb7;
 }
 
 .form-container {
-  /* position: sticky; */
-  /* position: -webkit-sticky; */
   position: relative;
   text-align: center;
-  /* align-items: center; */
   margin-bottom: 1rem;
-
-  /* border-style: solid; */
-  /* border-color: green; */
   width: 100%;
   height: auto;
-  /* margin: 0%; */
-
-
 }
 
 .input-todo {
   position: relative;
-  /* float: left; */
   width: 90%;
-  /* align-content: center; */
   text-align: left;
-  /* margin-bottom: 2rem; */
-  /* border-style: none; */
   background-color: aliceblue;
+
 }
 
 .todo-container {
-  /* position: absolute; */
+  position: relative;
   margin-top: 1rem;
   border-style: solid;
-  /* border-color: yellow; */
-  /* margin-left: 2rem; */
+  border-color: gray;
   overflow: scroll;
-  width: 100%;
+  width: 99%;
   height: auto;
-
-
+  /* The unit of the max-height MUST be 27rem to keep the todo item within its container 
+  and to align with .main-container above */
+  max-height: 27rem; 
+  overflow: hidden;
+  overflow-y: auto; /* This is the one needed for the scrollbar to work within this container */
 }
-
 
 .todo-item-container {
   position: relative;
   overflow: scroll;
   width: auto;
   height: auto;
-
-  /* background-color: rgb(182, 212, 230); */
-  /* background: linear-gradient(#87A7B3, #CDC7BE, #E1F1DD) no-repeat; */
-  /* background-image: linear-gradient(to right top, #587eb7, #00a3da, #00c5ca, #00de87, #a8eb12); */
   border-style: solid;
   border-width: 3px;
   border-color: white;
 }
 
 
-/* made a space before delete icon */
+/* ul leaves a space on the left of li when bullet style is removed 
+by assigning 0 to margin, padding-left and font-size, it removes that extra spaces */
 ul {
   list-style-type: none; /* removes the bullet style */
-  margin: 0; /* margin, padding-left and font-size set to 0 removes the spaces on the left of the li */
+  margin: 0;
   padding-left: 0;
   font-size: 0;
-
-
   background-color: paleturquoise;
-
 }
 
 .todo-item {
   text-decoration: none;
   color: balck;
   opacity: 1;
-
 }
 
 
@@ -124,11 +92,10 @@ ul {
   text-decoration: line-through;
   color: gray;
   opacity: 0.5;
-
 }
 
 /* The container */
-/* Checkbox texts move when margin is adjusted */
+/* Checkbox texts move when margin is adjusted in here */
 .checkbox-container {
   position: relative;
   text-align: center;

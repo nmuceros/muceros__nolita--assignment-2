@@ -38,6 +38,7 @@ const TodoList = () => {
                         type="text" 
                         placeholder="Input to do here..." 
                         onChange={ changeTodo_Handler} 
+                        autoFocus
                         value = { todo } />
                 </form>
             </div>
