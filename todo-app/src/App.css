@@ -1,75 +1,118 @@
-body, html {
+body {
   padding: 0;
   margin: 0;
   font-family: Tahoma;
-  overflow: auto;
-  /* background-color: grey; */
-  /* color: white; */
+  /* overflow: auto; */
+  /* background-color: linear-gradient(#87A7B3, #CDC7BE, #E1F1DD) no-repeat; */
+  /* background-image: linear-gradient(to right top, #587eb7, #00a3da, #00c5ca, #00de87, #a8eb12); */
+  /* background-color: linear-gradient(to right top, #587eb7, #00a3da, #00c5ca, #00de87, #a8eb12); */
+  /* background-color: linear-gradient(to right, red , yellow); */
+  /* background-color: red; */
+  background-color: black;
+
+  background-size: cover;
+  height: 100%;
+  /* background-color: #d5d5d5;   */
+
+  
 }
+
 
 .main-container {
   position: absolute;
   width: 35%;
-  /* height: auto; */
   height: 80%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-style: solid;
-  border-width: 1px;
-  /* text-align: center; */
+  border-width: 2px;
 
-  border-color: red;
-  overflow: scroll;
+  border-color: darkgray;
+  /* overflow: scroll; */
 
-  /* padding-left: 2rem; */
-  padding-right: 2rem;
-  
+  /* padding-right: 2rem; */
+  /* background: linear-gradient(#87A7B3, #CDC7BE, #E1F1DD) no-repeat; */
+
+  background-image: linear-gradient(to right top, #587eb7, #00a3da, #00c5ca, #00de87, #a8eb12);
 
 }
 
 h2 {
   text-align: center;
+  /* background-color: lightgray; */
 }
 
 .form-container {
-  text-align: center;
-  /* position: -webkit-sticky; */
   /* position: sticky; */
+  /* position: -webkit-sticky; */
+  position: relative;
+  text-align: center;
+  /* align-items: center; */
   margin-bottom: 1rem;
+
+  /* border-style: solid; */
+  /* border-color: green; */
+  width: 100%;
+  height: auto;
+  /* margin: 0%; */
+
+
+}
+
+.input-todo {
+  position: relative;
+  /* float: left; */
+  width: 90%;
+  /* align-content: center; */
+  text-align: left;
+  /* margin-bottom: 2rem; */
+  /* border-style: none; */
+  background-color: aliceblue;
+}
+
+.todo-container {
+  /* position: absolute; */
+  margin-top: 1rem;
+  border-style: solid;
+  /* border-color: yellow; */
+  /* margin-left: 2rem; */
+  overflow: scroll;
+  width: 100%;
+  height: auto;
+
+
 }
 
 
-/* .todo-container { */
 .todo-item-container {
   position: relative;
-  /* max-height: 24rem; */
-  /* overflow: hidden; */
-  /* overflow: scroll; */
-  /* overflow-y: auto; */
-  /* border-style: solid; */
-  /* border-width: 3px; */
-  /* border-color: green; */
   overflow: scroll;
   width: auto;
   height: auto;
-  /* background-color: yellow; */
 
-  background-color: pink;
+  /* background-color: rgb(182, 212, 230); */
+  /* background: linear-gradient(#87A7B3, #CDC7BE, #E1F1DD) no-repeat; */
+  /* background-image: linear-gradient(to right top, #587eb7, #00a3da, #00c5ca, #00de87, #a8eb12); */
   border-style: solid;
   border-width: 3px;
   border-color: white;
-  
 }
 
 
+/* made a space before delete icon */
 ul {
-  list-style-type: none;
+  list-style-type: none; /* removes the bullet style */
+  margin: 0; /* margin, padding-left and font-size set to 0 removes the spaces on the left of the li */
+  padding-left: 0;
+  font-size: 0;
+
+
+  background-color: paleturquoise;
 
 }
 
 .todo-item {
-  /* float: left; */
   text-decoration: none;
   color: balck;
   opacity: 1;
@@ -78,7 +121,6 @@ ul {
 
 
 .completed {
-  /* float: left; */
   text-decoration: line-through;
   color: gray;
   opacity: 0.5;
@@ -88,45 +130,16 @@ ul {
 /* The container */
 /* Checkbox texts move when margin is adjusted */
 .checkbox-container {
-  /* display: block; */
   position: relative;
-  /* float: left; */
-  /* margin: 0%;
-  padding: 0; */
   text-align: center;
   align-items: center;
-  /* padding-left: 2rem; */
-  /* margin-right: 2rem; */
   cursor: pointer;
   font-size: 22px;
-  /* -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; */
-
-  /* width: auto; */
-  /* border-style: solid; */
-  /* border-width: 5px; */
-  /* border-color: pink; */
   overflow: hidden;
-  /* width: 100%; */
-  /* border-style: solid; */
-
-  /* border-color: green; */
-  /* color: green;
-  border-style: solid;
-  border-color: green;
-  border-width: 3px; */
-  /* justify-content: center; */
-
-  /* background-color: red; */
-
   overflow: scroll;
   width: 100%;
   height: auto;
-
-
-
+  
 }
 
 .delete-container {
@@ -134,75 +147,10 @@ ul {
   float: left;
   align-items: center;
   text-align: center;
-  /* background-color: red; */
-  /* padding-bottom: 3px; */
-  /* text-align: center;
-  align-items: center;  */
-  /* width: auto; */
-  /* width: 80%;
-  height: auto; */
-
-  /* border-style: solid; */
 }
 
 .delete-icon {
   max-width: 100%;
   height: auto;
-  /* text-align: bottom; */
-
 }
 
-/* Hide the browser's default checkbox */
-/* .checkbox-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-} */
-
-/* Create a custom checkbox */
-/* .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-} */
-
-/* On mouse-over, add a grey background color */
-/* .checkbox-container:hover input ~ .checkmark {
-  background-color: #ccc;
-} */
-
-/* When the checkbox is checked, add a blue background */
-/* .checkbox-container input:checked ~ .checkmark {
-  background-color: #2196F3;
-} */
-
-
-/* Create the checkmark/indicator (hidden when not checked) */
-/* .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-} */
-
-/* Show the checkmark when checked */
-/* .checkbox-container input:checked ~ .checkmark:after {
-  display: block;
-} */
-
-/* Style the checkmark/indicator */
-/* .checkbox-container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-} */

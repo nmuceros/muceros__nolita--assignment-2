@@ -34,7 +34,7 @@ const TodoList = () => {
             <div className="form-container">
                 <form onSubmit={ submitTodo_Handler }>
                     <input 
-                        className="form-control" 
+                        className="input-todo" 
                         type="text" 
                         placeholder="Input to do here..." 
                         onChange={ changeTodo_Handler} 
