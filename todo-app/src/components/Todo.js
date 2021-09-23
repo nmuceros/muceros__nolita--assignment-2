@@ -4,11 +4,30 @@ import React, { useState } from "react";
 const Todo = ({entered_todo, todos, setTodos, todo }) => {
 
     const [completed, setCompleted] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
 
-    const completeTodo_Handler = () => {
-        setCompleted(true);
+    const completeWhenSelect_Handler = () => {
+        // setCompleted(true);
 
-        setTodos(todos.map( (item) => {
+        // setTodos(todos.map( item => {
+        //     if(item.id === todo.id) {
+        //         return {
+        //             ...item, completed: !item.completed
+        //         }
+        //     }
+        //     return item;
+        // }
+
+        // )
+
+        // )
+
+    }
+
+    const completeWhenChecked_Handler = e => {
+        setIsChecked(!isChecked)
+
+        setTodos(todos.map( item => {
             if(item.id === todo.id) {
                 return {
                     ...item, completed: !item.completed
@@ -20,25 +39,29 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
         )
 
         )
-
+    
     }
 
     return (
         <div className="todo-item-container">
             {/* style={{ color: completed === true ? "grey" : "" }} */}
             <li className={`todo-item ${todo.completed ? "completed" : ''}`} 
-                onClick={completeTodo_Handler}
+                onClick={completeWhenSelect_Handler}
                 
             >
 
-                {/* <label className="checkbox-container">
+                <label className="checkbox-container">
                   
-                    <input type="checkbox" />
+                    <input type="checkbox" 
+                            checked={isChecked}
+                            onChange={completeWhenChecked_Handler}
+                    />
+
                     <span className="checkmark"></span>
                     {entered_todo}
-                </label> */}
+                </label>
 
-                {entered_todo}
+                {/* {entered_todo} */}
 
             </li>
         </div>
