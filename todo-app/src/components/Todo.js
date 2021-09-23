@@ -3,28 +3,12 @@ import React, { useState } from "react";
 
 const Todo = ({entered_todo, todos, setTodos, todo }) => {
 
-    const [completed, setCompleted] = useState(false);
+    // const [completed, setCompleted] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
 
-    const completeWhenSelect_Handler = () => {
-        // setCompleted(true);
+    
 
-        // setTodos(todos.map( item => {
-        //     if(item.id === todo.id) {
-        //         return {
-        //             ...item, completed: !item.completed
-        //         }
-        //     }
-        //     return item;
-        // }
-
-        // )
-
-        // )
-
-    }
-
-    const completeWhenChecked_Handler = e => {
+    const completeTodo_Handler = e => {
         setIsChecked(!isChecked)
 
         setTodos(todos.map( item => {
@@ -45,8 +29,9 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
     return (
         <div className="todo-item-container">
             {/* style={{ color: completed === true ? "grey" : "" }} */}
+            {/* onClick={completeWhenSelect_Handler} */}
             <li className={`todo-item ${todo.completed ? "completed" : ''}`} 
-                onClick={completeWhenSelect_Handler}
+                
                 
             >
 
@@ -54,7 +39,7 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
                   
                     <input type="checkbox" 
                             checked={isChecked}
-                            onChange={completeWhenChecked_Handler}
+                            onChange={completeTodo_Handler}
                     />
 
                     <span className="checkmark"></span>
