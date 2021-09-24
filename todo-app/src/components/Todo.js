@@ -38,10 +38,11 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
             
 
                     <label className="checkbox-container">
-                        {/* <span className="checkmark"></span> */}
-                        <input type="checkbox" 
+                   
+                        <input type="checkbox"
                                 checked={isChecked}
                                 onChange={completeTodo_Handler}
+                                style={{cursor: "pointer"}}
                         />
                     
                         {entered_todo}

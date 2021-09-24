@@ -36,7 +36,7 @@ const TodoList = () => {
                     <input 
                         className="input-todo" 
                         type="text" 
-                        placeholder="Input to do here..." 
+                        placeholder="Enter new task here..." 
                         onChange={ changeTodo_Handler} 
                         autoFocus
                         value = { todo } />
