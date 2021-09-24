@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import Form from './components/TodoList';
 import TodoList from './components/TodoList';
 // import remove from './images/delete.svg';
 

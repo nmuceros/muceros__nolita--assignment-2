@@ -15,7 +15,7 @@ body {
   width: 35%;
   /* The unit of heigh must be 34 rem to align with the .todo-container */
   /* height: 34rem; */
-  height: 550px;
+  height: 555px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -30,13 +30,24 @@ h2 {
   color: #587eb7;
 }
 
+.error {
+  font-size: 12px;
+  color: rgb(236, 28, 236);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: center;
+
+}
+
 .form-container {
   position: relative;
   text-align: center;
   /* margin-bottom: 1rem; */
-  margin-bottom: 12px;
+  margin-bottom: 2px;
   width: 100%;
   height: auto;
+
 }
 
 .input-todo {
@@ -61,7 +72,7 @@ h2 {
   /* The unit of the max-height MUST be 27rem to keep the todo item within its container 
   and to align with .main-container above */
   /* max-height: 27rem;  */
-  max-height: 430px;
+  max-height: 410px;
   overflow: hidden;
   overflow-y: auto; /* This is the one needed for the scrollbar to work within this container */
 }
@@ -119,7 +130,7 @@ ul {
   width: 100%;
   height: auto;
   /* margin-left: 5px; */
-  border-color: red;
+  /* border-color: red; */
   
 }
 

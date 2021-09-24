@@ -35,7 +35,7 @@ const TodoList = () => {
         e.preventDefault(); /* prevents state to return to its default state */
         // setErrors(validation(e.target.value));
         if(!todo) {
-            setErrorMessage("Please enter a task first!")
+            setErrorMessage("No task has been entered!")
 
         }
         else {
@@ -58,20 +58,24 @@ const TodoList = () => {
 
     return (
         <div className="todo-list-container">
+       
             <div className="form-container">
+             
                 <form onSubmit={ submitTodo_Handler }>
                     <input 
                         className="input-todo" 
                         type="text" 
-                        placeholder="Enter new task here..." 
+                        placeholder="Enter new task here then hit enter..." 
                         onChange={ changeTodo_Handler} 
                         autoFocus
                         value = { todo } 
                     />
-                    {errorMessage && <p className="error">{errorMessage}</p>}
+                   
                 </form>
             </div>
-            {/* <div className="sticky-here">Sticky Here</div> */}
+
+           {errorMessage && <p className="error">{errorMessage}</p>}
+         
             <div className="todo-container">
                 <ul className="todo-list">
                     {todos.map((todo) => 
