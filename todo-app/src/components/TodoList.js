@@ -7,7 +7,6 @@ const TodoList = () => {
     const [todos, setTodos] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
 
-
     const changeTodo_Handler = (e) => {
         setTodo(e.target.value);
         console.log(e.target.value)
@@ -15,6 +14,7 @@ const TodoList = () => {
     };
 
     const submitTodo_Handler = (e) => {
+        let timestamp = new Date();
         e.preventDefault(); /* prevents state to return to its default state */
 
         if(!todo) {
@@ -24,9 +24,7 @@ const TodoList = () => {
             setTodos([...todos, {
                 entered_todo: todo, 
                 completed: false, 
-                id: Math.random() * 1000,
-
-            
+                id: Math.random() * 1000
             }]);
             setTodo(""); /* set the state to its default value */
         }

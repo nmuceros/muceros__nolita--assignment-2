@@ -6,17 +6,43 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
 
     const [isChecked, setIsChecked] = useState(false);
 
+
+    const getCurrentDateTime = () => {
+        let currentDate = new Date();
+        let formattedDate = currentDate.getFullYear() + '-' + (currentDate.getMonth()+1) + '-' + currentDate.getDate() +' '+ currentDate.getHours()+':'+ currentDate.getMinutes()+':'+ currentDate.getSeconds();
+        /* The output will be in this format YYYY-MM-DD H:MM:SS */
+        return formattedDate;
+     
+    }
+
+
     const completeTodo_Handler = e => {
         setIsChecked(!isChecked)
 
-        setTodos(todos.map( item => {
-            if(item.id === todo.id) {
-                return {
-                    ...item, completed: !item.completed
-                };
-            }
-            return item;
+        // setTodos(todos.map( item => {
+        //     if(item.id === todo.id) {
+        //         return {
+        //             ...item, completed: !item.completed, timestamp: getCurrentDateTime()
+        //         };
+        //     }
+        //     return item;
+        // }));
+
+        const completeTodo = todos.map( item => {
+                if(item.id === todo.id) {
+                    return {
+                        // ...item, completed: !item.completed, timestamp: getCurrentDateTime()
+                        ...item, completed: !item.completed
+                    };
+                }
+                return item;
+            });
+
+        setTodos(completeTodo.sort( (firstItem, secondItem) => {
+            // return firstItem.completed - secondItem.completed || firstItem.timestamp - secondItem.timestamp;
+            return firstItem.completed - secondItem.completed;
         }));
+        
     };
 
     const deleteTodo_Handler = () => {
