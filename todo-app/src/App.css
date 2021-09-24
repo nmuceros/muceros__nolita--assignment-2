@@ -1,4 +1,4 @@
-body {
+body html {
   padding: 0;
   margin: 0;
   font-family: Tahoma;
@@ -114,10 +114,10 @@ ul {
   float: left;
   align-items: center;
   text-align: center;
+  z-index: 2;
 }
 
 .delete-icon {
   max-width: 100%;
   height: auto;
 }
-

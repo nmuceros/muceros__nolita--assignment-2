@@ -10,7 +10,7 @@ function App() {
   
 
     <div className="main-container">
-      <h2>My Tasks List</h2>
+      <h2>My Tasks</h2>
          <TodoList />
   </div>
   );

@@ -27,8 +27,8 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
     return (
         <div className="todo-item-container">
          
-                <div className="delete-container">
-                    <a onClick={deleteTodo_Handler} >
+                <div className="delete-container" onClick={deleteTodo_Handler} >
+                    <a>
                          <img className="delete-icon" alt="" src={deleteIcon} />
                    </a>
                  </div>
