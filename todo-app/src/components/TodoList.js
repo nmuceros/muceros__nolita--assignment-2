@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import Todo from "./Todo";
 import "../../src/App.css"
 
@@ -24,14 +25,28 @@ const TodoList = () => {
             setTodos([...todos, {
                 entered_todo: todo, 
                 completed: false, 
-                id: Math.random() * 1000
+                id: Math.round(Math.random() * 1000).toString()
             }]);
             setTodo(""); /* set the state to its default value */
         }
     }
 
+    const reOrder = (todos, startIndex, endIndex) => {
+        const result = Array.from(todos);
+        const [removed] = result.splice(startIndex, 1);
+        result.splice(endIndex, 0, removed);
+        return result;
+    }
+
+
+    const onEnd = result => {
+        console.log(result);
+        setTodos(reOrder(todos, result.source.index, result.destination.index));
+    }
+
     return (
-        <div className="todo-list-container">
+        <main className="todo-list-container">
+
             <div className="form-container">
                 <form onSubmit={ submitTodo_Handler }>
                     <input 
@@ -42,28 +57,65 @@ const TodoList = () => {
                         autoFocus
                         value = { todo } 
                     />
-                   
+                
                 </form>
             </div>
 
-           {errorMessage && <p className="error">{errorMessage}</p>}
-         
-            <div className="todo-container">
-                <ul className="todo-list">
-                    {todos.map((todo) => 
-                        <div key={todo.id}>
-                                <Todo 
-                                    id={todo.id} 
-                                    entered_todo={todo.entered_todo}
-                                    todos={todos}
-                                    setTodos={setTodos}
-                                    todo={todo}
-                                />
+            {errorMessage && <p className="error">{errorMessage}</p>}
+
+            <DragDropContext onDragEnd={onEnd}>   
+
+                <Droppable droppableId='12345678'>
+
+                    {(provided, snapshot) => (
+                        <div ref={provided.innerRef}>
+
+                            <div className="todo-container">
+                                <ul className="todo-list">
+                                    {todos.map((todo, index) => (
+
+                                        <Draggable
+                                            draggableId={todo.id}
+                                            key={todo.id}
+                                            index={index}
+                                        >
+                                            {(provided, snapshot) => (
+                                                <div 
+                                                    key={todo.id}
+                                                    ref={provided.innerRef}
+                                                    {...provided.draggableProps}
+                                                    {...provided.dragHandleProps}
+                                                >
+
+
+                                                    {/* <div key={todo.id}> */}
+                                                            <Todo 
+                                                                id={todo.id} 
+                                                                entered_todo={todo.entered_todo}
+                                                                todos={todos}
+                                                                setTodos={setTodos}
+                                                                todo={todo}
+                                                            />
+                                                    {/* </div> */}
+                                                </div>
+                                            )}   
+
+                                        </Draggable>
+                                    ))}
+                                    {provided.placeholder}
+                                </ul>
+                            </div>                            
+
+
                         </div>
                     )}
-                </ul>
-             </div>
-        </div>
+
+
+
+                </Droppable>                            
+             </DragDropContext>
+
+        </main>
     );
 };
 
