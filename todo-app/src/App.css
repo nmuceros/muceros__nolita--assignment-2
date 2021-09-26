@@ -61,9 +61,10 @@ h2 {
   width: 99%;
   height: auto;
   /* The height align with the height in '.main-container' above */
-  max-height: 410px;
+  max-height: 430px;
   overflow: hidden;
   overflow-y: auto; /* This is the one needed for the scrollbar to work within this container */
+  /* margin-top: 1rem; */
 }
 
 .todo-item-container {
