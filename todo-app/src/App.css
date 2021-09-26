@@ -4,6 +4,7 @@ body {
   font-family: cursive;
   background-color: #333;
   height: 100%;
+  /* font-size: 2em; */
 }
 
 
@@ -22,8 +23,10 @@ body {
   border-width: 2px;
   border-color: darkgray;
   background-image: linear-gradient(to right top, #587eb7, #00a3da, #00c5ca, #00de87, #a8eb12);
-  width: 50%;
-  height: 80%;
+  /* width: 50%; */
+  width: 50vw;
+  /* height: 80%; */
+  height: 80vh;
   top: 10%;
   left: 25%;
   /* overflow: auto;  */
@@ -32,6 +35,7 @@ body {
 h2 {
   text-align: center;
   color: #587eb7;
+  font-size: 2vw;
 }
 
 .error {
@@ -62,14 +66,24 @@ h2 {
 
 .todo-container {
   position: relative;
+  /* position: absolute; */
   margin-top: 12px;
-  border-style: solid;
-  border-color: gray;
+  /* margin-left: 25px; */
+  /* margin-right: 15px; */
+  /* border-style: solid; */
+  /* border-color: gray; */
   overflow: scroll;
-  width: 99%;
-  height: auto;
+  /* width: 97%; */
+  /* width: 46vw; */
+  width: 100%;
+  /* align-items: center; */
+  /* height: auto; */
+  /* height: 100%; */
+ 
   /* The height align with the height in '.main-container' above */
-  max-height: 460px;
+  /* max-height: 460px; */
+  max-height: 60vh;
+  /* max-height: 60%; */
   overflow: hidden;
   overflow-y: auto; /* This is the one needed for the scrollbar to work within this container */
   /* margin-top: 1rem; */
@@ -84,6 +98,7 @@ h2 {
   border-width: 4px;
   border-color: white;
   align-items: center;
+  /* margin-left: 5%; */
 }
 
 
@@ -134,7 +149,8 @@ ul {
 .checkbox-container {
   position: relative;
   cursor: pointer;
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: 1vw;
   overflow: hidden;
   overflow: scroll;
   width: 100%;
@@ -160,4 +176,17 @@ ul {
   align-items: center;
   margin-top: .1rem;
   max-width: 60%;
+  height: auto;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1024px) {
+  h2 {
+    font-size: 2.5vw;
+  }
+
+  .checkbox-container {
+    font-size: 2vw;
+  }
+
 }

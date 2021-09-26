@@ -2,7 +2,9 @@ import React, { useState } from "react";
 // import TodoList from "./TodoList";
 // import deleteIcon from '../images/delete.svg';
 // import deleteIcon from '../images/remove_circle.svg';
-import deleteIcon from '../images/delete-white.svg';
+// import deleteIcon from '../images/delete-white.svg';
+import deleteIcon from '../images/remove_circle_black.svg';
+// import deleteIcon from '../images/remove_circle_white.svg';
 
 
 const Todo = ({entered_todo, todos, setTodos, todo }) => {
