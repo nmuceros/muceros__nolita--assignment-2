@@ -42,7 +42,6 @@ h2 {
   margin-bottom: 2px;
   width: 100%;
   height: auto;
-
 }
 
 .input-todo {
@@ -51,7 +50,6 @@ h2 {
   text-align: left;
   background-color: aliceblue;
   font-family: cursive;
-
 }
 
 .todo-container {
@@ -91,10 +89,12 @@ ul {
 }
 
 .todo-item {
+  /* position: relative; */
   text-decoration: none;
   color: black;
   opacity: 1;
-  cursor: move; /* change the cursor style to cross-like cursor */
+  /* change the cursor style to cross-like cursor */
+  /* cursor: move;  */
 }
 
 
@@ -113,6 +113,10 @@ ul {
   overflow: scroll;
   width: 100%;
   height: auto;  
+}
+
+.draggable {
+  position: absolute;
 }
 
 
