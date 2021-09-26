@@ -98,7 +98,7 @@ ul {
   color: black;
   opacity: 1;
   /* change the cursor style to cross-like cursor */
-  /* cursor: move;  */
+  cursor: move; 
 }
 
 
@@ -106,6 +106,7 @@ ul {
   text-decoration: line-through;
   color: gray;
   opacity: 0.5;
+  background-color: rgb(206, 222, 246);
 }
 
 
@@ -128,8 +129,6 @@ ul {
 }
 
 
-
-
 .delete-container {
   position: relative;
   float: left;
@@ -137,8 +136,13 @@ ul {
   text-align: center;
   z-index: 2;
   cursor: pointer;
+  /* border-style: solid;
+  border-style: none; */
+  width: 1rem;
+  height: auto;
 }
 
 .delete-icon {
-  max-width: 70%;
+  position: relative;
+  max-width: 100%;
 }
