@@ -40,7 +40,7 @@ const TodoList = () => {
 
 
     const onDragEnd_Handler = result => {
-        console.log(`Result is ${result}`);
+        // console.log(`Result is ${result}`);
         // console.log(`Result.destination.index is ${result.destination.index}`);
 
         if (result.destination !== null) {
@@ -55,6 +55,8 @@ const TodoList = () => {
         const { moveTo, curve, duration } = snapshot.dropAnimation;
         // move to the right spot
         const translate = `translate(${moveTo.x}px, ${moveTo.y}px)`;
+      
+
         // add a bit of turn for fun
         const rotate = 'rotate(0.5turn)';
       
@@ -63,7 +65,7 @@ const TodoList = () => {
           ...style,
           transform: `${translate} ${rotate}`,
           // slowing down the drop because we can
-          transition: `all ${curve} ${duration + .1}s`,
+          transition: `all ${curve} ${duration}s`,
         };
       }
       
@@ -135,12 +137,14 @@ const TodoList = () => {
                                                             )}   
 
                                                         </Draggable>
+                                                    
                                                     ))}
                                                     {provided.placeholder}
                                                 </ul>
 
-                                    
+                                                {/* {provided.placeholder}                                     */}
                                              </div>
+                                             
                                         )}
 
 

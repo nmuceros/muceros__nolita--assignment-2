@@ -104,6 +104,14 @@ ul {
   opacity: 0.5;
 }
 
+
+.draggable {
+  position: static;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+
 /* Checkbox texts move when margin is adjusted in here */
 .checkbox-container {
   position: relative;
@@ -115,9 +123,9 @@ ul {
   height: auto;  
 }
 
-.draggable {
+/* .draggable {
   position: absolute;
-}
+} */
 
 
 .delete-container {
