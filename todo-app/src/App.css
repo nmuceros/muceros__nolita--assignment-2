@@ -73,7 +73,7 @@ h2 {
   width: auto;
   height: auto;
   border-style: solid;
-  border-width: 3px;
+  border-width: 4px;
   border-color: white;
   align-items: center;
 }
@@ -87,23 +87,27 @@ ul {
   padding-left: 0;
   font-size: 0;
   background-color: paleturquoise;
+  /* height: 2rem; */
 }
 
 .todo-item {
   /* position: static;
   top: 0 !important;
   left: 0 !important; */
-
+  /* margin-top: .5rem; */
+  height: 1.5rem;
   text-decoration: none;
   color: black;
   opacity: 1;
   /* change the cursor style to cross-like cursor */
   cursor: move; 
+  justify-content: center;
+  /* align-items: center; */
 }
 
 
 .completed {
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
   color: gray;
   opacity: 0.5;
   background-color: rgb(206, 222, 246);
@@ -131,18 +135,20 @@ ul {
 
 .delete-container {
   position: relative;
+  /* margin-top: .3rem; */
   float: left;
   align-items: center;
   text-align: center;
   z-index: 2;
   cursor: pointer;
-  /* border-style: solid;
-  border-style: none; */
-  width: 1rem;
-  height: auto;
+  /* border-style: solid; */
+  /* width: 1rem; */
+  /* height: auto; */
 }
 
 .delete-icon {
   position: relative;
-  max-width: 100%;
+  align-items: center;
+  margin-top: .1rem;
+  max-width: 60%;
 }

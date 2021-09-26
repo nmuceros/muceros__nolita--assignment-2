@@ -19,7 +19,7 @@ const TodoList = () => {
         e.preventDefault(); /* prevents state to return to its default state */
 
         if(!todo) {
-            setErrorMessage("Please enter a task to be added in your list!")
+            setErrorMessage("You need to enter a task to be added in the list!")
         }
         else {
             setTodos([...todos, {
