@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import Todo from "./Todo";
 import "../../src/App.css"
@@ -7,6 +7,11 @@ const TodoList = () => {
     const [todo, setTodo] = useState(''); 
     const [todos, setTodos] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        inputRef.current.focus();
+    }, [])
 
     const changeTodo_Handler = (e) => {
         setTodo(e.target.value);
@@ -82,7 +87,7 @@ const TodoList = () => {
                         type="text" 
                         placeholder="Input to-do here then hit enter..." 
                         onChange={ changeTodo_Handler} 
-                        autoFocus
+                        ref={inputRef}
                         value = { todo } 
                     />
                 
