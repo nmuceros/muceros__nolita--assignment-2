@@ -10,13 +10,13 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
     const [isChecked, setIsChecked] = useState(false);
 
 
-    // const getCurrentDateTime = () => {
-    //     let currentDate = new Date();
-    //     let formattedDate = currentDate.getFullYear() + '-' + (currentDate.getMonth()+1) + '-' + currentDate.getDate() +' '+ currentDate.getHours()+':'+ currentDate.getMinutes()+':'+ currentDate.getSeconds();
-    //     /* The output will be in this format YYYY-MM-DD H:MM:SS */
-    //     return formattedDate;
+    const getCurrentDateTime = () => {
+        let currentDate = new Date();
+        let formattedDate = currentDate.getFullYear() + '-' + (currentDate.getMonth()+1) + '-' + currentDate.getDate() +' '+ currentDate.getHours()+':'+ currentDate.getMinutes()+':'+ currentDate.getSeconds();
+        /* The output will be in this format YYYY-MM-DD H:MM:SS */
+        return formattedDate;
      
-    // }
+    }
 
 
     const completeTodo_Handler = e => {

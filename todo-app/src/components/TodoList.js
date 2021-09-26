@@ -19,7 +19,7 @@ const TodoList = () => {
         e.preventDefault(); /* prevents state to return to its default state */
 
         if(!todo) {
-            setErrorMessage("You need to enter a task to be added in the list!")
+            setErrorMessage("Please input to-do to be added in the list!")
         }
         else {
             setTodos([...todos, {
@@ -80,7 +80,7 @@ const TodoList = () => {
                     <input 
                         className="input-todo" 
                         type="text" 
-                        placeholder="Enter new task here then hit enter..." 
+                        placeholder="Input to-do here then hit enter..." 
                         onChange={ changeTodo_Handler} 
                         autoFocus
                         value = { todo } 

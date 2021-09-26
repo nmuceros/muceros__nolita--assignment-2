@@ -9,7 +9,7 @@ function App() {
   
 
     <div className="main-container">
-      <h2>My Tasks</h2>
+      <h2>My To-Do List</h2>
          <TodoList />
   </div>
   );
