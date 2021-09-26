@@ -63,7 +63,7 @@ const TodoList = () => {
           ...style,
           transform: `${translate} ${rotate}`,
           // slowing down the drop because we can
-          transition: `all ${curve} ${duration + 1}s`,
+          transition: `all ${curve} ${duration + .1}s`,
         };
       }
       
