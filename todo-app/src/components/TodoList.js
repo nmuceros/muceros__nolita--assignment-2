@@ -26,7 +26,7 @@ const TodoList = () => {
                 entered_todo: todo, 
                 completed: false, 
                 id: Math.round(Math.random() * 1000).toString()
-            }]);
+            }].sort( (firstItem, secondItem) => firstItem.completed - secondItem.completed));
             setTodo(""); /* set the state to its default value */
         }
     }

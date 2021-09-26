@@ -89,7 +89,10 @@ ul {
 }
 
 .todo-item {
-  /* position: relative; */
+  /* position: static;
+  top: 0 !important;
+  left: 0 !important; */
+
   text-decoration: none;
   color: black;
   opacity: 1;
@@ -105,11 +108,11 @@ ul {
 }
 
 
-.draggable {
+/* .draggable {
   position: static;
   top: 0 !important;
   left: 0 !important;
-}
+} */
 
 
 /* Checkbox texts move when margin is adjusted in here */
@@ -123,9 +126,7 @@ ul {
   height: auto;  
 }
 
-/* .draggable {
-  position: absolute;
-} */
+
 
 
 .delete-container {
