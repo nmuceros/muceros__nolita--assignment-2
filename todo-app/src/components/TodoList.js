@@ -13,6 +13,8 @@ const TodoList = () => {
         inputRef.current.focus();
     }, [])
 
+
+
     const changeTodo_Handler = (e) => {
         setTodo(e.target.value);
         console.log(e.target.value)
@@ -136,6 +138,7 @@ const TodoList = () => {
                                                                                 todos={todos}
                                                                                 setTodos={setTodos}
                                                                                 todo={todo}
+                                                                             
                                                                             />
                                                                     {/* </div> */}
                                                                 </div>

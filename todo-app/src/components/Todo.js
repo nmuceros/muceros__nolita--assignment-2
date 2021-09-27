@@ -7,7 +7,7 @@ import deleteIcon from '../images/remove_circle_black.svg';
 // import deleteIcon from '../images/remove_circle_white.svg';
 
 
-const Todo = ({entered_todo, todos, setTodos, todo }) => {
+const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -16,7 +16,7 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
         let currentDate = new Date();
         let formattedDate = currentDate.getFullYear() + '-' + (currentDate.getMonth()+1) + '-' + currentDate.getDate() +' '+ currentDate.getHours()+':'+ currentDate.getMinutes()+':'+ currentDate.getSeconds();
         /* The output will be in this format YYYY-MM-DD H:MM:SS */
-        return formattedDate;
+        return Date.parse(formattedDate);
      
     }
 
@@ -37,16 +37,19 @@ const Todo = ({entered_todo, todos, setTodos, todo }) => {
                 if(item.id === todo.id) {
                     return {
                         // ...item, completed: !item.completed, timestamp: getCurrentDateTime()
-                        ...item, completed: !item.completed
+                        ...item, completed: !item.completed, timestamp: getCurrentDateTime()
                     };
                 }
                 return item;
-            });
+         });
 
-        setTodos(completeTodo.sort( (firstItem, secondItem) => {
+        setTodos(completeTodo.sort((firstItem, secondItem) => { 
+            return firstItem.completed - secondItem.completed || firstItem.timestamp - secondItem.timestamp
+          }
+           
             // return firstItem.completed - secondItem.completed || firstItem.timestamp - secondItem.timestamp;
-            return firstItem.completed - secondItem.completed;
-        }));
+            // return firstItem.completed - secondItem.completed;
+        ));
         
     };
 
