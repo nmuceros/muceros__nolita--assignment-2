@@ -54,7 +54,8 @@ h2 {
   margin-top: 12px;
   overflow: scroll;
   width: 100%;
-  max-height: 60vh;  /* The height align with the height in '.main-container' above */
+  /* The height align with the height in '.main-container' above */
+  max-height: 64vh;  
   overflow: hidden;
   overflow-y: auto; /* This is the one needed for the scrollbar to work within this container */
 }
@@ -75,7 +76,7 @@ h2 {
 by assigning 0 to margin, padding-left and font-size, it removes that extra spaces */
 ul {
   list-style-type: none; /* removes the bullet style */
-  margin: 0;
+  margin-left: 0;
   padding-left: 0;
   font-size: 0;
   background-color: paleturquoise;
@@ -116,6 +117,7 @@ ul {
   float: left;
   align-items: center;
   text-align: center;
+  margin-left: 5px;
 }
 
 .delete-icon {
