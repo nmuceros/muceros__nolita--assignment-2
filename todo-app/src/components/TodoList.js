@@ -13,8 +13,6 @@ const TodoList = () => {
         inputRef.current.focus();
     }, [])
 
-
-
     const changeTodo_Handler = (e) => {
         setTodo(e.target.value);
         console.log(e.target.value)
@@ -47,9 +45,6 @@ const TodoList = () => {
 
 
     const onDragEnd_Handler = result => {
-        // console.log(`Result is ${result}`);
-        // console.log(`Result.destination.index is ${result.destination.index}`);
-
         if (result.destination !== null) {
             setTodos(reOrder(todos, result.source.index, result.destination.index));
         } 
@@ -61,12 +56,9 @@ const TodoList = () => {
         }
         const { moveTo, curve, duration } = snapshot.dropAnimation;
         // move to the right spot
-        const translate = `translate(${moveTo.x}px, ${moveTo.y}px)`;
-      
-
+        const translate = `translate(${moveTo.x}px, ${moveTo.y}px)`;      
         // add a bit of turn for fun
-        const rotate = 'rotate(0.5turn)';
-      
+        const rotate = 'rotate(0.5turn)';      
         // patching the existing style
         return {
           ...style,
@@ -74,14 +66,10 @@ const TodoList = () => {
           // slowing down the drop because we can
           transition: `all ${curve} ${duration}s`,
         };
-      }
-      
-     
-
+      }           
 
     return (
         <main className="todo-list-container">
-
             <div className="form-container">
                 <form onSubmit={ submitTodo_Handler }>
                     <input 
@@ -92,82 +80,50 @@ const TodoList = () => {
                         ref={inputRef}
                         value = { todo } 
                     />
-                
                 </form>
             </div>
-
             {errorMessage && <p className="error">{errorMessage}</p>}
-
-
-
-
-                            <div className="todo-container">
-
-                            
-                                <DragDropContext onDragEnd={onDragEnd_Handler}>   
-
-                                    <Droppable droppableId='12345678'>
-
-                                        {(provided, snapshot) => (
-                                            <div ref={provided.innerRef}>
-
-
-                                                <ul className="todo-list">
-                                                    {todos.map((todo, index) => (
-
-                                                        <Draggable
-                                                            className="draggable"
-                                                            draggableId={todo.id}
-                                                            key={todo.id}
-                                                            index={index}
-                                                        >
-                                                            {(provided, snapshot) => (
-                                                                <div 
-                                                                    key={todo.id}
-                                                                    ref={provided.innerRef}
-                                                                    {...provided.draggableProps}
-                                                                    {...provided.dragHandleProps}
-                                                                    style={getStyle(provided.draggableProps.style, snapshot)}
-                                                                >
-
-
-                                                                    {/* <div key={todo.id}> */}
-                                                                            <Todo 
-                                                                                id={todo.id} 
-                                                                                entered_todo={todo.entered_todo}
-                                                                                todos={todos}
-                                                                                setTodos={setTodos}
-                                                                                todo={todo}
-                                                                             
-                                                                            />
-                                                                    {/* </div> */}
-                                                                </div>
-                                                            )}   
-
-                                                        </Draggable>
+            <div className="todo-container">
+                <DragDropContext onDragEnd={onDragEnd_Handler}>   
+                    <Droppable droppableId='12345678'>
+                        {(provided, snapshot) => (
+                            <div ref={provided.innerRef}>
+                                <ul className="todo-list">
+                                    {todos.map((todo, index) => (
+                                        <Draggable
+                                            className="draggable"
+                                            draggableId={todo.id}
+                                            key={todo.id}
+                                            index={index}
+                                        >
+                                            {(provided, snapshot) => (
+                                                <div key={todo.id} 
+                                                    key={todo.id}
+                                                    ref={provided.innerRef}
+                                                    {...provided.draggableProps}
+                                                    {...provided.dragHandleProps}
+                                                    style={getStyle(provided.draggableProps.style, snapshot)}
+                                                >
+                                                <Todo 
+                                                    id={todo.id} 
+                                                    entered_todo={todo.entered_todo}
+                                                    todos={todos}
+                                                    setTodos={setTodos}
+                                                    todo={todo}
                                                     
-                                                    ))}
-                                                    {provided.placeholder}
-                                                </ul>
-
-                                                {/* {provided.placeholder}                                     */}
-                                             </div>
-                                             
-                                        )}
-
-
-
-                                    </Droppable>                            
-                                </DragDropContext>                                        
-
-
-                            </div>    
-
-                            
-                                                    
-
-
-
+                                                />
+                                                </div>
+                                            )}   
+                                        </Draggable>
+                                    ))}
+                                    {provided.placeholder}
+                                </ul>
+                            </div>
+                                
+                        )}
+                    </Droppable>                            
+                </DragDropContext>                                        
+            </div>    
         </main>
     );
 };
