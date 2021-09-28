@@ -61,9 +61,9 @@ const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
     return (
         <div className="todo-item-container">
          
-                <div className="delete-container" onClick={deleteTodo_Handler} >
+                <div className="delete-container" >
                     <a>
-                         <img className="delete-icon" alt="" src={deleteIcon} />
+                         <img className="delete-icon" onClick={deleteTodo_Handler} alt="" src={deleteIcon} />
                    </a>
                  </div>
 
