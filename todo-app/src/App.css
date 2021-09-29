@@ -62,13 +62,23 @@ h2 {
 
 .todo-item-container {
   position: relative;
+  display: flex;
+  /* align-items: baseline; */
+  /* text-align: center; */
+  /* align-content: center; */
+  /* align-items: center; */
+  /* justify-items: center; */
+  height: auto;
   overflow: scroll;
   width: auto;
-  height: auto;
+  /* height: auto; */
   border-style: solid;
   border-width: 4px;
   border-color: white;
-  align-items: center;
+  align-items: center; /* centers delete icon, checkbox and texts vertically */
+  /* flex-wrap: nowrap; */
+  /* white-space:; */
+  /* margin-right: 1rem; */
 }
 
 
@@ -82,33 +92,69 @@ ul {
   background-color: paleturquoise;
 }
 
+ul li {
+  /* position: relative; */
+  /* height: auto; */
+}
+
+ul li .todo-item {
+  /* position: relative; */
+  /* height: auto; */
+  /* margin-right: 1rem; */
+}
+
+
 .todo-item {
-  height: auto;
+  position: relative;
+  /* height: auto; */
   text-decoration: none;
   color: black;
   opacity: 1;
   cursor: move; 
-  justify-content: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* align-content: center; */
+  margin-right: 1rem;
+  width: 100%;
+  margin-left: .4rem;
+
+  /* border: solid red; */
+  /* height: auto; */
+  /* border: solid 2px  white; */
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+}
+
+.checkbox-container {
+  margin-left: .3rem;
+  padding-right: .5rem;
+  /* border: solid red; */
+  /* text-overflow: ellipsis; */
 }
 
 
 .completed {
+  position: relative;
   color: rgb(109, 106, 106);
   opacity: 0.5;
   background-color: rgb(152, 184, 231);
+  /* width: 100%; */
 }
 
 
 /* Checkbox texts move when margin is adjusted in here */
 .checkbox-container {
   position: relative;
+  /* float: right; */
   cursor: pointer;
   font-size: 1vw;
   overflow: hidden;
   overflow: scroll;
   width: 100%;
   height: auto;  
-  margin-left: 5px;
+  /* margin-left: 5px; */
+
+    /* border: solid red; */
 }
 
 
@@ -116,16 +162,25 @@ ul {
   position: relative;
   float: left;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
+  /* align-items: center; */
   margin-left: 5px;
+  /* height: auto */
+  /* width: 3%; */
+  height: auto;
+
+  /* border: solid red; */
 }
 
-.delete-icon {
+a .delete-icon {
+  /* == Note: When width prop is added here, the icon shrinks when multiple lines todo is entered == */
   position: relative;
-  align-items: center;
-  margin-top: .1rem;
-  max-width: 60%;
-  height: auto;
+  /* align-items: center; */
+  /* align-items: center; */
+  /* margin-top: .5rem; */
+  /* width: 80%; */
+  /* max-width: 100%; */
+  /* height: auto; */
   z-index: 2;
   cursor: pointer;
 }
@@ -137,7 +192,7 @@ ul {
   }
 
   .checkbox-container {
-    font-size: 2vw;
-    margin-left: 5px;
+    /* font-size: 2vw;
+    margin-left: 5px; */
   }
 }

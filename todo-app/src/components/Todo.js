@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import deleteIcon from '../images/remove_circle_black.svg';
+// import deleteIcon from '../images/remove_circle_black.svg';
+// import deleteIcon from '../images/remove_circle_white.svg';
+import deleteIcon from '../images/delete.svg';
 
 const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
     
