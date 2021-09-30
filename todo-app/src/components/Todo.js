@@ -49,12 +49,26 @@ const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
              </div>
 
             <li className={`todo-item ${todo.completed ? "completed" : "todo-item"}`} >
-                <label className="checkbox-container">
+                <label className="checkbox-container"
+                    style={{
+                        display: "flex",
+                        alignItems: "center"
+
+                
+                    }}
+                >
                     <input type="checkbox" 
                             // style={{float:"left"}}
+                            className="todo-checkbox"
                             checked={isChecked}
                             onChange={completeTodo_Handler}
-                            style={{cursor: "pointer", float: "left", marginRight: "5px"}}
+                            style={{
+                                    flex: "none",
+                                    cursor: "pointer", 
+                                    float: "left", 
+                                    marginRight: "5px", 
+                                    verticalAlign:"middle"
+                            }} 
                     />
                     <span
                         style={{overflow:"hidden"}}

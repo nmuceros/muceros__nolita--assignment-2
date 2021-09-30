@@ -141,6 +141,11 @@ ul li .todo-item {
   /* width: 100%; */
 }
 
+.todo-checkbox {
+  /* vertical-align: -webkit-baseline-middle; */
+  /* vertical-align: middle; */
+  /* height: auto; */
+}
 
 /* Checkbox texts move when margin is adjusted in here */
 .checkbox-container {
