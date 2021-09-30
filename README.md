@@ -4,38 +4,38 @@ This project is a simple React Todo List application styled using CSS.
 
 Technologies/Packages used:
 
-NodeJS / NPM / JavaScript / React / CSS / JSX / react-beautiful-dnd
+    NodeJS / NPM / JavaScript / React / CSS / JSX / react-beautiful-dnd
 
 Requirements:
 
--Git Bash
--Visual Studio Code
+    -Git Bash
+    -Visual Studio Code
 
 
 Steps to use this project:
 
--Open bash terminal then create a folder where to store the repo
+    -Open bash terminal then create a folder where to store the repo
 
--Change directory to the newly created repo folder
+    -Change directory to the newly created repo folder
 
--Clone the main repo
+    -Clone the main repo
 
-    git clone repoURL
-    
--Change directory to the repo folder
+        git clone repoURL
 
--Install dependencies
+    -Change directory to the repo folder
 
-  npm install
+    -Install dependencies
+
+      npm install
   
--Open VS Code
+    -Open VS Code
 
-  code .
-  
--Open the terminal (View menu >> Terminal)
+      code .
 
--Start the app
+    -Open the terminal (View menu >> Terminal)
 
-  npm start
+    -Start the app
+
+      npm start
   
 Note: It should automatically open a browser and run the app. If it doesn't, open a browser then go to URL:[http://localhost:3000
