@@ -4,7 +4,7 @@ This project is a simple React Todo List application styled using CSS.
 
 **Technologies/Packages used:**
     
-    NodeJS / NPM / JavaScript / React / CSS / JSX / react-beautiful-dnd / react-confetti
+    NodeJS / NPM / JavaScript / React / CSS / JSX / react-beautiful-dnd
 
 **Requirements:**
 

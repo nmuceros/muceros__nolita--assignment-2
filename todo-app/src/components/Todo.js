@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import deleteIcon from '../images/remove_circle_black.svg';
-// import deleteIcon from '../images/remove_circle_white.svg';
 import deleteIcon from '../images/delete.svg';
 
 const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
@@ -53,7 +51,7 @@ const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
                     style={{
                         display: "flex",
                         alignItems: "center",
-                        marginRight: "10px"
+                        marginRight: "12px"
                     }}
                 >
                     <input type="checkbox" 
@@ -64,10 +62,10 @@ const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
                                     flex: "none",
                                     cursor: "pointer", 
                                     float: "left", 
-                                    marginRight: "10px", 
+                                    marginRight: "12px", 
                                     verticalAlign: "middle",
-                                    width: "18px",
-                                    height: "18px"
+                                    width: "2vw",
+                                    height: "2vw"
                             }} 
                     />
                     <span

@@ -8,6 +8,7 @@ const TodoList = () => {
     const [todos, setTodos] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
     const inputRef = useRef(null);
+    const errMessageText = "Must enter something to be added in the list!"
 
     useEffect(() => {
         inputRef.current.focus();
@@ -24,7 +25,7 @@ const TodoList = () => {
         e.preventDefault(); /* prevents state to return to its default state */
 
         if(!todo) {
-            setErrorMessage("Please input to-do to be added in the list!")
+            setErrorMessage(errMessageText);
         }
         else {
             setTodos([...todos, {
@@ -79,6 +80,7 @@ const TodoList = () => {
                         onChange={ changeTodo_Handler} 
                         ref={inputRef}
                         value = { todo } 
+                        style={{ fontSize: "1.5vw"}}
                     />
                 </form>
             </div>
