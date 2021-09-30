@@ -73,6 +73,7 @@ const TodoList = () => {
         <main className="todo-list-container">
             <div className="form-container">
                 <form onSubmit={ submitTodo_Handler }>
+                    {errorMessage && <p className="error">{errorMessage}</p>}
                     <input 
                         className="input-todo" 
                         type="text" 
@@ -84,7 +85,7 @@ const TodoList = () => {
                     />
                 </form>
             </div>
-            {errorMessage && <p className="error">{errorMessage}</p>}
+
             <div className="todo-container">
                 <DragDropContext onDragEnd={onDragEnd_Handler}>   
                     <Droppable droppableId='12345678'>

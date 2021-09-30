@@ -64,8 +64,8 @@ const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
                                     float: "left", 
                                     marginRight: "12px", 
                                     verticalAlign: "middle",
-                                    width: "2vw",
-                                    height: "2vw"
+                                    width: "1.5vw",
+                                    height: "1.5vw"
                             }} 
                     />
                     <span
