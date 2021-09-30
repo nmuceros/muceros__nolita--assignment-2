@@ -80,7 +80,7 @@ const TodoList = () => {
                         onChange={ changeTodo_Handler} 
                         ref={inputRef}
                         value = { todo } 
-                        style={{ fontSize: "1.5vw"}}
+                        // style={{ fontSize: "1.5vw"}}
                     />
                 </form>
             </div>
