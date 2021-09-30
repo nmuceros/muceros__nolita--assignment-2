@@ -38,4 +38,4 @@ Steps to use this project:
 
       npm start
   
-Note: It should automatically open a browser and run the app. If it doesn't, open a browser then go to URL:[http://localhost:3000
+Note: It should automatically open a browser and run the app. If it doesn't, open a browser then go to URL: http://localhost:3000
