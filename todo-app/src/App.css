@@ -126,8 +126,8 @@ ul li .todo-item {
 }
 
 .checkbox-container {
-  margin-left: .3rem;
-  padding-right: .5rem;
+  /* margin-left: .3rem; */
+  /* padding-right: .5rem; */
   /* border: solid red; */
   /* text-overflow: ellipsis; */
 }

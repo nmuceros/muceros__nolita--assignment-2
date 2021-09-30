@@ -50,12 +50,15 @@ const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
 
             <li className={`todo-item ${todo.completed ? "completed" : "todo-item"}`} >
                 <label className="checkbox-container">
-                    <input type="checkbox"
+                    <input type="checkbox" 
+                            // style={{float:"left"}}
                             checked={isChecked}
                             onChange={completeTodo_Handler}
-                            style={{cursor: "pointer"}}
+                            style={{cursor: "pointer", float: "left", marginRight: "5px"}}
                     />
-                    {entered_todo}
+                    <span
+                        style={{overflow:"hidden"}}
+                    >{entered_todo}</span>
                 </label>
             </li>
         </div>
