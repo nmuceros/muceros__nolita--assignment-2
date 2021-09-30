@@ -7,7 +7,7 @@ body {
 }
 
 
-.main-container {
+.main {
   position: absolute;
   border-width: 2px;
   border-color: darkgray;
@@ -16,12 +16,26 @@ body {
   height: 80vh;
   top: 10%;
   left: 25%;
+  /* border-radius: 5% 5% 0% 0%; */
+  /* border-radius: 40px 40px 0px 0px; */
+  /* border-radius: 15px 50px; */
+
+  /* box-shadow: 15px 10px white; */
+  box-shadow: 50px 50px 50px rgb(94 170 230);
+  /* box-shadow: 50px 50px 50px #00a3da;  */
+  /* rgb(94 170 230); */
+  /* #00a3da; */
 }
 
 h2 {
   text-align: center;
   color: #587eb7;
   font-size: 2vw;
+}
+
+.time-container {
+  position: relative;
+  height: 100%;
 }
 
 .error {
@@ -54,7 +68,7 @@ h2 {
   margin-top: 12px;
   overflow: scroll;
   width: 100%;
-  /* The height align with the height in '.main-container' above */
+  /* The height align with the height in '.main' above */
   max-height: 64vh;  
   overflow: hidden;
   overflow-y: auto; /* This is the one needed for the scrollbar to work within this container */
