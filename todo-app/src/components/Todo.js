@@ -52,13 +52,11 @@ const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
                 <label className="checkbox-container"
                     style={{
                         display: "flex",
-                        alignItems: "center"
-
-                
+                        alignItems: "center",
+                        marginRight: "10px"
                     }}
                 >
                     <input type="checkbox" 
-                            // style={{float:"left"}}
                             className="todo-checkbox"
                             checked={isChecked}
                             onChange={completeTodo_Handler}
@@ -66,8 +64,10 @@ const Todo = ({entered_todo, todos, setTodos, todo, timestamp }) => {
                                     flex: "none",
                                     cursor: "pointer", 
                                     float: "left", 
-                                    marginRight: "5px", 
-                                    verticalAlign:"middle"
+                                    marginRight: "10px", 
+                                    verticalAlign: "middle",
+                                    width: "18px",
+                                    height: "18px"
                             }} 
                     />
                     <span
