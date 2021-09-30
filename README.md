@@ -10,6 +10,8 @@ Requirements:
 
 -Git Bash
 -Visual Studio Code
+
+
 Steps to use this project:
 
 -Open bash terminal then create a folder where to store the repo
@@ -18,18 +20,22 @@ Steps to use this project:
 
 -Clone the main repo
 
-git clone repoURL
+    git clone repoURL
+    
 -Change directory to the repo folder
 
 -Install dependencies
 
-npm install
+  npm install
+  
 -Open VS Code
 
-code .
+  code .
+  
 -Open the terminal (View menu >> Terminal)
 
 -Start the app
 
-npm start
+  npm start
+  
 Note: It should automatically open a browser and run the app. If it doesn't, open a browser then go to URL:[http://localhost:3000
