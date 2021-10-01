@@ -27,7 +27,7 @@ This project is a React Todo List application with interesting drag and drop eff
 
         npm install
 
-    -Start the code
+    -Start the application
 
         npm start
 
