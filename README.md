@@ -1,6 +1,6 @@
 # FS1010_Assignment2_Todo_List_App
 
-This project is a simple React Todo List application styled using CSS.
+This project is a React Todo List application with interesting drag and drop effect
 
 **Technologies/Packages used:**
     
@@ -11,32 +11,29 @@ This project is a simple React Todo List application styled using CSS.
     -Git Bash
     -Visual Studio Code
 
-**Steps to use this project:**
+**Steps to run the application:**
 
--Open bash terminal then create a folder where to store the repo 
+    -Create a folder where to store the repo 
 
--Change directory to the newly created repo folder
+    -Change directory to the newly created folder
 
--Clone the main repo
-    
-    git clone repoURL
+    -Clone the main repo
+        
+        git clone repoURL
 
--Change directory to the repo folder
+    -Change directory to the repo folder
 
--Install dependencies
+    -Install dependencies
 
-    npm install
+        npm install
 
--Open VS Code
+    -Start the code
 
-    code .
+        npm start
 
--Open the terminal (View menu >> Terminal)
+        Note: It should automatically open a browser and run the app. 
+              If it doesn't, open a browser then go to URL:http://localhost:3000
 
--Start the app
+**To open the project:**
 
-    npm start
-
-Note: It should automatically open a browser and run the app.
-    If it doesn't, open a browser then go to URL:[http://localhost:3000
-    
+     -Open the project folder in Visual Studio Code
