@@ -31,7 +31,7 @@ This project is a React Todo List application with interesting drag and drop eff
 
         npm start
 
-        Note: It should automatically open a browser and run the app. 
+        Note: It should automatically open a browser and run the application.
               If it doesn't, open a browser then go to URL:http://localhost:3000
 
 **To open the project:**
