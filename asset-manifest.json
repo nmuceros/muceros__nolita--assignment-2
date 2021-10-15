@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/muceros__nolita--assignment-2/static/css/main.a0850dec.chunk.css",
+    "main.js": "/muceros__nolita--assignment-2/static/js/main.2fe0a52b.chunk.js",
+    "main.js.map": "/muceros__nolita--assignment-2/static/js/main.2fe0a52b.chunk.js.map",
+    "runtime-main.js": "/muceros__nolita--assignment-2/static/js/runtime-main.5ea87001.js",
+    "runtime-main.js.map": "/muceros__nolita--assignment-2/static/js/runtime-main.5ea87001.js.map",
+    "static/js/2.61f340d9.chunk.js": "/muceros__nolita--assignment-2/static/js/2.61f340d9.chunk.js",
+    "static/js/2.61f340d9.chunk.js.map": "/muceros__nolita--assignment-2/static/js/2.61f340d9.chunk.js.map",
+    "static/js/3.4a60de12.chunk.js": "/muceros__nolita--assignment-2/static/js/3.4a60de12.chunk.js",
+    "static/js/3.4a60de12.chunk.js.map": "/muceros__nolita--assignment-2/static/js/3.4a60de12.chunk.js.map",
+    "index.html": "/muceros__nolita--assignment-2/index.html",
+    "static/css/main.a0850dec.chunk.css.map": "/muceros__nolita--assignment-2/static/css/main.a0850dec.chunk.css.map",
+    "static/js/2.61f340d9.chunk.js.LICENSE.txt": "/muceros__nolita--assignment-2/static/js/2.61f340d9.chunk.js.LICENSE.txt",
+    "static/media/delete.7838b275.svg": "/muceros__nolita--assignment-2/static/media/delete.7838b275.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ea87001.js",
+    "static/js/2.61f340d9.chunk.js",
+    "static/css/main.a0850dec.chunk.css",
+    "static/js/main.2fe0a52b.chunk.js"
+  ]
+}
